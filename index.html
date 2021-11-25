@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.1/dist/aframe-extras.min.js" ></script>
+<script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
+<!--This script is new-->
+<script>
+  // component declaration
+  AFRAME.registerComponent("mylink", {
+    // define a url in the schema
+    schema: {
+      href: {}
+    },
+    init: function() {
+      // when clicked - change the location:
+      this.el.addEventListener("click", (e) => {
+        window.location = this.data.href;
+      })
+    }
+  })
+</script>
+  </head>
+  <body>
+    <a-scene background="color: #D3D3D3"
+    cursor="rayOrigin: mouse"
+         fog="type: exponential; density: 0.12; color: #696969;"
+         animation="property: fog.color; dur: 7000;
+                   from: #696969; to: #fff;
+                   loop: true; dir: alternate">
+...
+  <a-light type="point" intensity="0" position="-2 2 2"
+           animation="property: light.intensity;
+                      dur: 7000; from: 0.5; to: 2;
+                      dir: alternate; loop: true">
+  </a-light>
+
+
+<a-text value="Isa Robertini" color="#00CBE1" position="-5 4 -4" scale="1.5 1.5 2"></a-text>
+<a-text value="Online Portfolio" color="#00CBE1" position="-1 4 -4" scale="1.5 1.5 2"></a-text>
+<a-text value="other projects" color="#00CBE1" position="3 4 -4" scale="1.5 1.5 2"></a-text>
+<!--This is the invisible plane with the hyperlink-->
+<a-plane position="4 4 -4" height="0.4" width="2.2" material="opacity: 0" mylink="href: projects.html;"></a-plane>
+
+      <a-assets>
+        <a-asset-item id="body" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Fkroppar.gltf?v=1637518395937"></a-asset-item>
+      </a-assets>
+
+      <a-entity position="0 1 -2" gltf-model="#body"
+                scale="0.2 0.2 0.2"
+                animation="property: rotation; dur: 10000;
+                           to: 0 360 0; loop: true">
+      </a-entity>
+
+
+      <a-assets>
+        <a-asset-item id="flaska" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Fflaska.gltf?v=1637525159729"></a-asset-item>
+      </a-assets>
+
+      <a-entity position="-2 1 -2" gltf-model="#flaska"
+                scale="0.2 0.2 0.2"
+                animation="property: rotation; dur: 10000;
+                           to: 0 360 0; loop: true">
+
+    </a-entity>
+
+  </a-entity>
+  <a-assets>
+    <a-asset-item id="vatten" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Fvatten.gltf?v=1637530819105"></a-asset-item>
+  </a-assets>
+
+  <a-entity position="2 1 -2" gltf-model="#vatten"
+            scale="0.2 0.2 0.2"
+            animation="property: rotation; dur: 10000;
+                       to: 0 360 0; loop: true">
+
+
+
+    </a-scene>
+  </body>
