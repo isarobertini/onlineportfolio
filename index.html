@@ -75,9 +75,32 @@
   <a-entity position="2 1 -2" gltf-model="#vatten"
             scale="0.2 0.2 0.2"
             animation="property: rotation; dur: 10000;
-                       to: 0 360 0; loop: true">
+                       to: 0 360 0; loop: true"></a-entity>
 
+      <a-assets>
+       <a-asset-item id="orange" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Forange2.gltf?v=1637851399777"></a-asset-item>
+          </a-assets>
 
+        <a-entity position="4 1 -1.5" gltf-model="#orange"
+          scale="0.2 0.2 0.2"
+            animation="property: rotation; dur: 10000;
+            to: 0 360 0; loop: true"></a-entity>
 
-    </a-scene>
+            <a-assets>
+             <a-asset-item id="text" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Ftext.gltf?v=1637852054022"></a-asset-item>
+                </a-assets>
+
+              <a-entity position="-5.5 0.5 0" gltf-model="#text"
+                scale="0.2 0.2 0.2"
+                  animation="property: rotation; dur: 10000;
+                  to: 0 360 0; loop: true"></a-entity>
+                  <a-assets>
+                   <a-asset-item id="paron" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Fparon1.glb?v=1637853892880"></a-asset-item>
+                      </a-assets>
+
+                    <a-entity position="-4 0.5 -1.5" gltf-model="#paron"
+                      scale="0.2 0.2 0.2"
+                        animation="property: rotation; dur: 10000;
+                        to: 0 360 0; loop: true"></a-entity>
+                      </a-scene>
   </body>
