@@ -25,34 +25,35 @@
 </script>
   </head>
   <body>
-    <a-scene background="color: #D3D3D3"
+    <a-scene background="color: #E1FEFF"
     cursor="rayOrigin: mouse"
-         fog="type: exponential; density: 0.12; color: #696969;"
+         fog="type: exponential; density: 0.20; color: #E1FEFF;"
          animation="property: fog.color; dur: 7000;
-                   from: #696969; to: #fff;
-                   loop: true; dir: alternate">
+                   from: #1A4749; to: #E1FEFF;
+                   loop: indefinite; dir: alternate">
 ...
-  <a-light type="point" intensity="0" position="-2 2 2"
+  <a-light type="point" color="#E1FEFF" intensity="40" position="0 0 0"
            animation="property: light.intensity;
-                      dur: 7000; from: 1; to: 2.5;
+                      dur: 7000; from: 0.2; to: 3;
                       dir: alternate; loop: true">
+
   </a-light>
 
 
-<a-text text="font: https://cdn.aframe.io/fonts/SourceCodePro.fnt; value: Isa Robertini" color="#00CBE1" position="-5 4 -4" scale="1.5 1.5 2"></a-text>
-<a-text text="font: https://cdn.aframe.io/fonts/SourceCodePro.fnt; value: Online Portfolio" color="#00CBE1" position="-5 3.5 -4" scale="1.5 1.5 2"></a-text>
-<a-text text="font: https://cdn.aframe.io/fonts/SourceCodePro.fnt; value: Other projects" color="#00CBE1" position="3 4 -4" scale="1.5 1.5 2"></a-text>
-<a-text text="font: https://cdn.aframe.io/fonts/SourceCodePro.fnt; value: Text by Astrid Schütter" color="#00CBE1" position="3 3.5 -4" scale="1.5 1.5 2"></a-text>
-<a-text text="font: https://cdn.aframe.io/fonts/SourceCodePro.fnt; value: Contact" color="#00CBE1" position="3 3 -4" scale="1.5 1.5 2"></a-text>
+<a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Isa Robertini" color="#00CBE1" position="-3 3.3 -3" scale="1.3 1.3 1"></a-text>
+<a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Online Portfolio" color="#00CBE1" position="-3 3 -3" scale="1 1 1"></a-text>
+<a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Other projects" color="#00CBE1" position="1 3.3 -3" scale="1 1 1"></a-text>
+<a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Text by Astrid Schütter" color="#00CBE1" position="1 3 -3" scale="1 1 1"></a-text>
+<a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Contact" color="#00CBE1" position="1 2.7 -3" scale="1 1 2"></a-text>
 <!--This is the invisible plane with the hyperlink-->
-<a-plane position="4 4 -4" height="0.4" width="2.2" material="opacity: 0" mylink="href: projects.html;"></a-plane>
-<a-plane position="3 3 -4" height="0.4" width="2.2" material="opacity: 0" mylink="href: contact.html;"></a-plane>
+<a-plane position="1 3.3 -3" height="0.4" width="2.2" material="opacity: 0" mylink="href: projects.html;"></a-plane>
+<a-plane position="1 2.7 -3" height="0.4" width="2.2" material="opacity: 0" mylink="href: contact.html;"></a-plane>
 
       <a-assets>
         <a-asset-item id="body" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Fkroppar.gltf?v=1637518395937"></a-asset-item>
       </a-assets>
 
-      <a-entity position="0 1 -2" gltf-model="#body"
+      <a-entity position="0 0.5 -3" gltf-model="#body"
                 scale="0.2 0.2 0.2"
                 animation="property: rotation; dur: 10000;
                            to: 0 360 0; loop: true">
@@ -63,7 +64,7 @@
         <a-asset-item id="flaska" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Fflaska.gltf?v=1637525159729"></a-asset-item>
       </a-assets>
 
-      <a-entity position="-2 1 -2" gltf-model="#flaska"
+      <a-entity position="-2 0.5 -3" gltf-model="#flaska"
                 scale="0.2 0.2 0.2"
                 animation="property: rotation; dur: 10000;
                            to: 0 360 0; loop: true">
@@ -75,35 +76,41 @@
     <a-asset-item id="vatten" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Fvatten.gltf?v=1637530819105"></a-asset-item>
   </a-assets>
 
-  <a-entity position="2 1 -2" gltf-model="#vatten"
+  <a-entity position="2 0.5 -3" gltf-model="#vatten"
             scale="0.2 0.2 0.2"
             animation="property: rotation; dur: 10000;
                        to: 0 360 0; loop: true"></a-entity>
 
       <a-assets>
-       <a-asset-item id="orange" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Forange2.gltf?v=1637851399777"></a-asset-item>
+       <a-asset-item id="paron" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Fnyp.gltf?v=1638201029618"></a-asset-item>
           </a-assets>
 
-        <a-entity position="4 1 -1.5" gltf-model="#orange"
-          scale="0.2 0.2 0.2"
+        <a-entity position="3.5 0.5 -2" gltf-model="#paron"
+          scale="0.1 0.1 0.1"
             animation="property: rotation; dur: 10000;
             to: 0 360 0; loop: true"></a-entity>
 
             <a-assets>
-             <a-asset-item id="text" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Ftext.gltf?v=1637852054022"></a-asset-item>
+
+
+
+       <a-asset-item id="text" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Ftext.gltf?v=1637852054022"></a-asset-item>
                 </a-assets>
 
-              <a-entity position="-5.5 0.5 0" gltf-model="#text"
-                scale="0.2 0.2 0.2"
+              <a-entity position="-3.5 0.5 -2" gltf-model="#text"
+                scale="0.1 0.1 0.1"
                   animation="property: rotation; dur: 10000;
                   to: 0 360 0; loop: true"></a-entity>
                   <a-assets>
-                   <a-asset-item id="paron" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Fparon1.glb?v=1637853892880"></a-asset-item>
-                      </a-assets>
 
-                    <a-entity position="-4 0.5 -1.5" gltf-model="#paron"
-                      scale="0.2 0.2 0.2"
-                        animation="property: rotation; dur: 10000;
-                        to: 0 360 0; loop: true"></a-entity>
+          <a-asset-item id="orange" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Forange2.gltf?v=1637851399777"></a-asset-item>
+          </a-assets>
+
+          <a-entity position="4.5 0.5 -0.5" gltf-model="#orange"
+                scale="0.1 0.1 0.1"
+                animation="property: rotation; dur: 10000;
+                          to: 0 360 0; loop: true"></a-entity>
+         <a-assets>
+
                       </a-scene>
   </body>
