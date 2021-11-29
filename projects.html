@@ -29,34 +29,57 @@
   <body>
     <a-scene background="color: #98FF67"
          cursor="rayOrigin: mouse"
-         fog="type: exponential; density: 0.12; color: #696969;"
+         fog="type: exponential; density: 0.12; color: #67FF69;"
          animation="property: fog.color; dur: 7000;
-                   from: #696969; to: #fff;
+                   from: #67FF69; to: #004601;
                    loop: true; dir: alternate">
 ...
-  <a-light type="point" intensity="0" position="-2 2 2"
+  <a-light color="#67FF69" type="point" intensity="30" position="-2 2 2"
            animation="property: light.intensity;
                       dur: 7000; from: 0.5; to: 2;
                       dir: alternate; loop: true">
   </a-light>
-  <a-text value="Scenkonstbiennalen" color="#00CBE1" position="-5 4 -4" scale="1.5 1.5 2"></a-text>
-  <a-text value="Film" color="#00CBE1" position="0 4 -4" scale="1.5 1.5 2"></a-text>
-  <a-text value="Skenstafestivalen" color="#00CBE1" position="3 4 -4" scale="1.5 1.5 2"></a-text>
+    <!--Scenkonstbiennalen-->
+  <a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Scenkonstbiennalen 2021" color="#00CBE1" position="-6 4 -4" scale="1.5 1.5 2"></a-text>
+  <a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: for Folkteatern in Gothenburg" color="#00CBE1" position="-6 3.5 -4" scale="1 1 2"></a-text>
+  <a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Direct link to VR-room Into the Web" color="#00CBE1" position="-6 3 -4" scale="1 1 2"></a-text>
+
+  <a-plane position="-6 3 -4" height="0.4" width="7" material="opacity: 0" mylink="href:https://intotheweb.online/;"></a-plane>
+    <!--film and videos-->
+  <a-text <a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value:Film & Videos" color="#00CBE1" position="-1 2 -4" scale="1.5 1.5 2"></a-text>
+  <a-text <a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Kärlek och Mani" color="#00CBE1" position="-1 1.5 -4" scale="1 1 2"></a-text>
+  <a-text <a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Don Quijote- Scenkonstbiennalen" color="#00CBE1" position="-1 1 -4" scale="1 1 2"></a-text>
+
+  <a-plane position="-1 1.5 -4" height="0.4" width="7" material="opacity: 0" mylink="href:https://www.youtube.com/watch?v=Pc3yYk2wjkM&t=11s&ab_channel=FolkteaternG%C3%B6teborg;"></a-plane>
+  <a-plane position="-1 1 -4" height="0.4" width="7" material="opacity: 0" mylink="href:https://www.folkteatern.se/evenemang/don-quijote-0;"></a-plane>
+
+    <!--Skenstafestivalen-->
+  <a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Skenstafestivalen" color="#00CBE1" position="2 4 -4" scale="1.5 1.5 2"></a-text>
+
+  <a-plane position="2 4 -4" height="0.4" width="7" material="opacity: 0" mylink="href:https://www.skenstafestivalen.com/;"></a-plane>
+<!--back-->
+  <a-text text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Back to homepage" color="#00CBE1" position="-7 -1 -4" scale="1.5 1.5 2"></a-text>
+
+  <a-plane position="-7 -1 -4" height="1" width="7" material="opacity: 0" mylink="href:index.html;"></a-plane>
+
   <!--This is the invisible plane with the hyperlink-->
+
   <a-plane position="-3.5 4 -4" height="0.4" width="3" material="opacity: 0" mylink="href:https://www.folkteatern.se/evenemang/folkteatern-pa-scenkonst-biennalen-2021;"></a-plane>
   <a-plane position="0.5 4 -4" height="0.4" width="3" material="opacity: 0" mylink="href:https://www.youtube.com/watch?v=Pc3yYk2wjkM&ab_channel=FolkteaternG%C3%B6teborg;"></a-plane>
 
+  <a-assets>
+    <a-asset-item id="body" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Fkroppar.gltf?v=1637518395937"></a-asset-item>
+  </a-assets>
+
+  <a-entity position="0 -1 -11" gltf-model="#body"
+            scale="5 5 5"
+            animation="property: rotation; dur: 10000;
+                       to: 0 360 0; loop: true">
+  </a-entity>
 
 
   </a-entity>
-  <a-assets>
-    <a-asset-item id="vatten" src="https://cdn.glitch.me/afe93d50-2971-46fc-adf7-1a8821fcc701%2Fvatten.gltf?v=1637530819105"></a-asset-item>
-  </a-assets>
 
-  <a-entity position="2 1 -2" gltf-model="#vatten"
-            scale="0.2 0.2 0.2"
-            animation="property: rotation; dur: 10000;
-                       to: 0 360 0; loop: true">
 
 
 
